@@ -35,9 +35,12 @@ img {
   padding: 120px 0px;
 }
 .container,
-.footer,
-.header {
+.solutions,
+.section,
+.header,
+.footer {
   width: 1158px;
+  margin: 0 auto;
 }
 
 /* Header styles */
@@ -45,7 +48,6 @@ img {
   border-bottom: 1px solid #e7e9fc;
 }
 header .container {
-  margin: 0 auto;
   padding: 0 15px 0 15px;
   display: flex;
   justify-content: space-between;
@@ -56,7 +58,8 @@ header .container {
   align-items: center;
 }
 .nav-logo {
-  margin-left: 156px;
+  margin-top: 24px;
+  margin-bottom: 24px;
   margin-right: 76px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -111,6 +114,7 @@ header .container {
 }
 /* Hero styles */
 .solutions {
+  margin: 0 auto;
   padding: 188px 0;
   background-color: #2e2f42;
   width: 1440px;
@@ -145,7 +149,7 @@ header .container {
   background-color: #404bbf;
 }
 /* Benefits styles */
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -153,9 +157,12 @@ header .container {
   border: 0;
   padding: 0;
   white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
   overflow: hidden;
+}
+.benefits section .container {
+  justify-content: center;
 }
 .benefits-subtitle {
   margin-bottom: 8px;
@@ -213,6 +220,10 @@ header .container {
   letter-spacing: 0.02em;
   text-align: center;
 }
+.team-img {
+  width: 100%;
+  height: auto;
+}
 /* Portfolio styles */
 .portfolio-title {
   text-transform: capitalize;
@@ -222,19 +233,16 @@ header .container {
   display: flex;
   flex-wrap: wrap;
   row-gap: 48px;
-  gap: 24px;
   justify-content: center;
 }
 .portfolio-item {
   width: calc((100% - 48px) / 3);
 }
 .portfolio-text-block {
-  padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
 .portfolio-subtitile {
-  margin-bottom: 8px;
   padding-top: 32px;
   padding-bottom: 8px;
   font-weight: 500;
@@ -254,6 +262,10 @@ header .container {
 .footer {
   padding: 100px 0;
   background-color: #2e2f42;
+}
+.footer .container {
+  max-width: 264px;
+  margin-left: 156px;
 }
 .footer-logo {
   display: inline-block;
